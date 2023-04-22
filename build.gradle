@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "maven-publish"
+    id 'signing'
 }
 
 group 'io.github.cweyy.deta'
@@ -26,21 +27,57 @@ java {
     withJavadocJar()
 }
 
+
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
-            url = "https://maven.pkg.github.com/cweyy/Deta-API"
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = System.getenv("OSSRH_USERNAME")
+                password = System.getenv("OSSRH_PASSWORD")
             }
         }
     }
     publications {
-        maven(MavenPublication) {
+        mavenJava(MavenPublication) {
             artifactId 'deta-api'
             from(components.java)
+
+            pom {
+                name = 'Deta-API'
+                description = 'unofficial deta.sh/deta.space api for java'
+                url = 'https://github.com/cweyy/Deta-API'
+
+                scm {
+                    connection = 'scm:git:git:github.com/cweyy/Deta-API.git'
+                    developerConnection = 'scm:git:ssh://github.com:cweyy/Deta-API'
+                    url = 'https://github.com/cweyy/Deta-API'
+                }
+
+                developers {
+                    developer {
+                        id = 'cweyy'
+                        name = 'Johann Judek'
+                        email = 'johannjudek@icloud.com'
+                    }
+                }
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+            }
+
+
         }
     }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+
+
 }
