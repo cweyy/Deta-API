@@ -21,6 +21,11 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 publishing {
     repositories {
         maven {
@@ -31,10 +36,10 @@ publishing {
                 password = System.getenv("GITHUB_TOKEN")
             }
         }
-        publications {
-            maven(MavenPublication) {
-                from(components.java)
-            }
+    }
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
         }
     }
 }
