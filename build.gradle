@@ -24,8 +24,8 @@ test {
 publishing {
     repositories {
         maven {
-            name = "Deta-API"
-            url = uri("https://maven.pkg.github.com/cweyy/Deta-API")
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/cweyy/Deta-API"
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
