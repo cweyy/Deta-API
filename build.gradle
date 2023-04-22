@@ -39,6 +39,7 @@ publishing {
     }
     publications {
         maven(MavenPublication) {
+            artifactId 'deta-api'
             from(components.java)
         }
     }
