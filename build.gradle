@@ -3,7 +3,7 @@ plugins {
     id "maven-publish"
 }
 
-group 'de.johannj.deta'
+group 'io.github.cweyy.deta'
 version '1.0'
 
 repositories {
