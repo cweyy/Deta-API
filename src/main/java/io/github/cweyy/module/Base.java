@@ -1,8 +1,8 @@
-package io.github.cweyy.deta.module;
+package io.github.cweyy.module;
 
 import com.google.gson.*;
-import io.github.cweyy.deta.Deta;
-import io.github.cweyy.deta.http.Request;
+import io.github.cweyy.Deta;
+import io.github.cweyy.http.Request;
 
 import java.io.IOException;
 

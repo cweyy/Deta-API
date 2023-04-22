@@ -1,4 +1,4 @@
-package io.github.cweyy.deta;
+package io.github.cweyy;
 
 public class Deta {
     private String baseUrl;
