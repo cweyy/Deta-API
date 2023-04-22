@@ -39,6 +39,7 @@ publishing {
             }
         }
     }
+
     publications {
         mavenJava(MavenPublication) {
             artifactId 'deta-api'
