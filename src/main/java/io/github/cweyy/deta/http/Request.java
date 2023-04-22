@@ -1,9 +1,9 @@
-package de.johannj.deta.http;
+package io.github.cweyy.deta.http;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import de.johannj.deta.Deta;
+import io.github.cweyy.deta.Deta;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.*;
 import org.apache.http.entity.StringEntity;

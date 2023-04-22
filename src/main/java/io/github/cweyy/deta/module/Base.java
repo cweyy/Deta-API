@@ -1,8 +1,8 @@
-package de.johannj.deta.module;
+package io.github.cweyy.deta.module;
 
 import com.google.gson.*;
-import de.johannj.deta.Deta;
-import de.johannj.deta.http.Request;
+import io.github.cweyy.deta.Deta;
+import io.github.cweyy.deta.http.Request;
 
 import java.io.IOException;
 
