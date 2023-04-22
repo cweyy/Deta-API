@@ -39,7 +39,7 @@ publishing {
     }
     publications {
         maven(MavenPublication) {
-            artifactId 'deta-api'
+            artifactId 'Deta-API'
             from(components.java)
         }
     }
