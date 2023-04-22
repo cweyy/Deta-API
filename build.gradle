@@ -4,7 +4,7 @@ plugins {
     id 'signing'
 }
 
-group 'io.github.cweyy.deta'
+group 'io.github.cweyy'
 version '1.0'
 
 repositories {
