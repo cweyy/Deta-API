@@ -1,5 +1,8 @@
 package io.github.cweyy.deta;
 
+import com.google.gson.JsonObject;
+import io.github.cweyy.deta.module.Base;
+
 public class Deta {
     private String baseUrl;
     private String projectKey;
