@@ -12,9 +12,9 @@ Deta deta = new Deta("yourDetaProjectKey");
 Base base = new Base(deta, "MyBase");
 
 JsonObject json = new JsonObject();
-json.addProperty("name", "Mark");
-json.addProperty("lastname", "Forster");
-json.addProperty("age", 40);
+json.addProperty("name", "Jeremy");
+json.addProperty("lastname", "Fragrance");
+json.addProperty("age", 34);
 
 base.put(json);
 ```
